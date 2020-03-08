@@ -6,7 +6,7 @@ class bit32:
         self.hexwidth = int(bits/4)
 
     def __repr__(self):
-        return "|{}|0x{}|{}|".format(self.int, self.hexstring, self.bitstring)
+        return "{}bits:{}|0x{}|{}|".format(self.bitwidth, self.int, self.hexstring, self.bitstring)
 
     @property
     def int(self):
@@ -26,7 +26,8 @@ class bit32:
         return bin(self.val)
 
 a = bit32(22, 32)
+a = bit32(22, 16)
 # a.hex = "asdf"
-print('Value:', a)
+print(a)
 # print(a.bitstring)
 # print(a.hexstring)
